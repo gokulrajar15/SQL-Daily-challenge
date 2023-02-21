@@ -1,0 +1,19 @@
+Day 1 
+
+question link ---  https://leetcode.com/problems/combine-two-tables/description/
+
+Query 
+
+select p.firstName, p.lastName, a.city, a.state
+from Person as p 
+left join Address as a
+on p.personId = a.personId;
+
+question link --- https://leetcode.com/problems/customers-who-never-order/description/
+
+Query
+
+select name Customers from Customers
+left join Orders
+on Customers.id = Orders.CustomerId
+where Orders.CustomerId is null;
