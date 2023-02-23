@@ -1,8 +1,7 @@
-Day 1 
 
 question link ---  https://leetcode.com/problems/combine-two-tables/description/
 
-Query 
+Query 1
 
 select p.firstName, p.lastName, a.city, a.state
 from Person as p 
@@ -11,7 +10,7 @@ on p.personId = a.personId;
 
 question link --- https://leetcode.com/problems/customers-who-never-order/description/
 
-Query
+Query 2
 
 select name Customers from Customers
 left join Orders
@@ -21,6 +20,19 @@ where Orders.CustomerId is null;
 
 
 question link --- https://leetcode.com/problems/game-play-analysis-i/
-Query
+
+Query 3
+
 Select distinct player_id, min(event_date) first_login from Activity
 Group by player_id ;
+
+
+question link --- https://leetcode.com/problems/duplicate-emails/
+
+Query 4
+select email from Person
+group by email >1
+having count(email)>1;
+
+question link --- https://leetcode.com/problems/duplicate-emails/
+
