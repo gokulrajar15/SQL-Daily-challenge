@@ -34,5 +34,16 @@ select email from Person
 group by email >1
 having count(email)>1;
 
-question link --- https://leetcode.com/problems/duplicate-emails/
+question link --- https://leetcode.com/problems/article-views-i/
+
+Query 5
+select DISTINCT author_id as id from Views
+where author_id = viewer_id
+order by author_id;
+
+question link --- https://leetcode.com/problems/find-customer-referee/
+
+Query 5
+select name from Customer
+where referee_id <> 2 or referee_id is null;
 
