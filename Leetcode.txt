@@ -54,3 +54,9 @@ select e.employee_id from employees e  left join salaries s on e.employee_id=s.e
 union 
 select s.employee_id from salaries s  left join employees e on e.employee_id=s.employee_id where e.name is null
 order by employee_id;
+
+question link --- https://leetcode.com/problems/employees-earning-more-than-their-managers/solutions/
+
+Query 7
+select e1.name Employee from Employee as e1, employee as e2
+where e1.managerId = e2.id AND e1.salary>e2.salary;
