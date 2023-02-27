@@ -97,3 +97,26 @@ select c.name Customers from Customers as c
 left join Orders as o
 on c.id = customerId
 where o.customerId is null
+
+
+
+question link ---https://leetcode.com/problems/calculate-special-bonus/description/?envType=study-plan&id=sql-i
+
+Query 14
+select employee_id, (if(name like "M%" or employee_id%2=0 , 0, salary)) as bonus from Employees
+order by employee_id
+
+
+question link ---https://leetcode.com/problems/delete-duplicate-emails/submissions/905995950/?envType=study-plan&id=sql-i
+
+Query 15
+select employee_id, (if(name like "M%" or employee_id%2=0 , 0, salary)) as bonus from Employees
+delete p1 from Person as p1, Person p2
+where p1.email = p2.email AND p1.id>p2.id
+
+
+question link --- https://leetcode.com/problems/swap-salary/submissions/906003951/?envType=study-plan&id=sql-i
+
+Query 16
+update Salary
+set sex = (if (sex = 'f', 'm','f'));
