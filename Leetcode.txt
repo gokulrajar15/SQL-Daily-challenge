@@ -120,3 +120,27 @@ question link --- https://leetcode.com/problems/swap-salary/submissions/90600395
 Query 16
 update Salary
 set sex = (if (sex = 'f', 'm','f'));
+
+
+question link --- https://leetcode.com/problems/fix-names-in-a-table/description/?envType=study-plan&id=sql-i
+
+Query 17
+SELECT user_id,
+ CONCAT(upper(substring(name,1,1)),LOWER(substring(name,2)))
+as name
+from Users 
+ORDER BY user_id
+
+
+
+question link --- https://leetcode.com/problems/group-sold-products-by-the-date/submissions/906335146/?envType=study-plan&id=sql-i
+
+Query 18
+select sell_date,
+ COUNT(DISTINCT(product)) as num_sold,
+ group_concat(distinct product order by product asc separator ',')
+ as products
+ from Activities
+ group by sell_date
+ order by sell_date
+
