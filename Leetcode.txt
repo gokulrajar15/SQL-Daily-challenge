@@ -144,3 +144,10 @@ select sell_date,
  group by sell_date
  order by sell_date
 
+
+question link --- https://leetcode.com/problems/employees-with-missing-information/description/?envType=study-plan&id=sql-i
+Query 19
+select e.employee_id from employees as e  left join salaries as s on e.employee_id=s.employee_id where s.salary is null
+union 
+select s.employee_id from salaries as s  left join employees as e on e.employee_id=s.employee_id where e.name is null
+order by employee_id;
