@@ -146,8 +146,23 @@ select sell_date,
 
 
 question link --- https://leetcode.com/problems/employees-with-missing-information/description/?envType=study-plan&id=sql-i
+
 Query 19
 select e.employee_id from employees as e  left join salaries as s on e.employee_id=s.employee_id where s.salary is null
 union 
 select s.employee_id from salaries as s  left join employees as e on e.employee_id=s.employee_id where e.name is null
 order by employee_id;
+
+question link --- https://leetcode.com/problems/rearrange-products-table/?envType=study-plan&id=sql-i
+
+Query 20
+select product_id, 'store1' as store, store1 as price 
+from Products where store1 is not null
+union
+select product_id, 'store2' as store, store2 as price 
+from Products where store2 is not null
+union
+select product_id, 'store3' as store, store3 as price 
+from Products where store3 is not null;
+
+
