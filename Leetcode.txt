@@ -166,3 +166,10 @@ select product_id, 'store3' as store, store3 as price
 from Products where store3 is not null;
 
 
+
+question link --- https://leetcode.com/problems/article-views-i/submissions/907756520/?envType=study-plan&id=sql-i
+
+Query 21
+select DISTINCT author_id as id from Views
+where author_id = viewer_id
+order by author_id
