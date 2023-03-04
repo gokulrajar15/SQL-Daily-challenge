@@ -173,3 +173,23 @@ Query 21
 select DISTINCT author_id as id from Views
 where author_id = viewer_id
 order by author_id
+
+
+
+question link --- https://leetcode.com/problems/second-highest-salary/description/?envType=study-plan&id=sql-i
+
+Query 22
+select max(salary) as SecondHighestSalary from Employee
+where salary < (select Max(salary) from Employee)
+
+question link ---
+
+Query 23
+
+
+
+
+question link --- 
+
+Query 24
+
