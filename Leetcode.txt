@@ -182,11 +182,17 @@ Query 22
 select max(salary) as SecondHighestSalary from Employee
 where salary < (select Max(salary) from Employee)
 
-question link ---
+question link ---https://leetcode.com/problems/tree-node/description/?envType=study-plan&id=sql-i
 
 Query 23
 
-
+select id, (case 
+when p_id is null then "Root"
+when id in (select p_id from Tree) THEN "Inner"
+else "Leaf"
+end
+) as type
+from Tree
 
 
 question link --- 
